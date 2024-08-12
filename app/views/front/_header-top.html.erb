@@ -1,0 +1,39 @@
+<div class="header-top">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-12 d-none d-lg-block">
+                  <div class="top-menu">
+                    <div class="contact-info">
+                      <a href="javascript:void(0)" class="pera"> Call Me (+55) -15 02 56<span class="pl-20 pr-20">/</span>Medi.Going@gmail.com </a>
+                    </div>
+                   <div class="header-social-link">
+                   
+                      <ul class="listing">
+                        <li class="single-list">
+                          <a href="javascript:void(0)" class="single"><i class="ri-facebook-fill"></i></a>
+                        </li>
+                        <li class="single-list">
+                          <a href="javascript:void(0)" class="single"><i class="ri-youtube-fill"></i></a>
+                        </li>
+                        <li class="single-list">
+                          <a href="javascript:void(0)" class="single"><i class="ri-instagram-line"></i></a>
+                        </li>
+                        <li class="single-list">
+                          <a href="javascript:void(0)" class="single"><i class="ri-linkedin-fill"></i></a>
+                        </li>
+                        <li class="single-list">
+  <%= form_with url: change_locale_path, method: :post, local: true, class: "language-form" do %>
+    <%= select_tag :locale, options_for_select([['English', 'en'], ['Hindi', 'hi']], I18n.locale), { class: 'single-list border-0 bg-transparent single', aria: { label: 'Language selection' } } %>
+    <%= submit_tag 'Change Language', style: 'display: none;' %>
+  <% end %>
+</li>
+
+
+                      </ul>
+                    </div>
+                  </div>
+                  <hr>
+                </div>
+              </div>
+            </div>
+          </div>

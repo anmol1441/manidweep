@@ -1,0 +1,5 @@
+#!/bin/bash
+# Start your development server and any other services you need.
+
+# Start the Rails server
+bin/rails server
