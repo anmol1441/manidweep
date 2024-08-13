@@ -29,6 +29,7 @@
 
 
 en:
+  change_language: "हिंदी"
   home: "Home"
   about: "About Us"
   torch:
@@ -62,3 +63,26 @@ en:
     item3: "Photo Gallery"
   awards: "Awards"
   contact: "Contact Us"
+
+  home-img-1-text: "Divine grace and realization can be attained not by renouncing the
+          world, but by living as householders and performing all duties with a
+          spirit of detachment."
+  home-img-1-auth: "Yugpravartak Shri Nandkishore Sharda"
+
+  home-img-2-text: "Selfless remembrance and love for God is the base of human life."
+  home-img-2-auth: "Yugapravartak Adhyatmayogi Shri Nandkishore Sharda"
+
+  footer:
+    about_us: "About Us"
+    contact_us: "Contact Us"
+    publications: "Publications"
+    basic_infrastructure: "Basic Infrastructure Facilities"
+    awards: "Awards"
+    future_plans: "Future Plans"
+    faq: "FAQ"
+    photo_gallery: "Photo Gallery"
+    downloads: "Downloads"
+    contact:
+      email: "manidweepjodhpur@gmail.com"
+      phone: "+91-94149-17901"
+      address: "A-183, Shastri Nagar, Jodhpur, Rajasthan - 342003, India"

@@ -1,0 +1,103 @@
+<section class="blog-section-two section-padding2">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-xl-7">
+              <!-- Section Tittle -->
+              <div class="section-tittle text-center mb-50">
+                <h2 class="title font-700">Divine Ambrosial Knowledge</h2>
+              </div>
+            </div>
+          </div>
+          <div class="row gy-24">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 view-wrapper">
+              <div class="single-blog h-calc wow fadeInLeft" data-wow-delay="0.1s">
+                <div class="blog-img position-relative">
+                  <a href="blog-details.html" > <img src="assets/book-01.png" class="img-fluid w-100" alt="img"> </a>
+                </div>
+                <div class="blog-info">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="blog-info-title">
+                      <h4 class="title text-capitalize"><a href="blog-details.html">Buddhi Vivek Yog Sadhna Technique.</a></h4>
+                      <p class="subtitle">On the basis of his experiences, Bhaiya Shri Nandkishore Sharda propounded a simple, contemporary, yet very effective technique called “Buddhi-Vivek Yoga Sadhana Technique” ..</p>
+                      <a href="blog-details.html" class="imp-link">
+                        Read More <i class="ri-arrow-right-line"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 view-wrapper">
+              <div class="single-blog h-calc wow fadeInUp" data-wow-delay="0.0s">
+                <div class="blog-img position-relative">
+                  <a href="blog-details.html" > <img src="assets/book-02.png" class="img-fluid w-100" alt="img"> </a>
+                  </div>
+                  <div class="blog-info">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="blog-info-title">
+                        <h4 class="title text-capitalize"><a href="blog-details.html">Logo of Manidweep</a></h4>
+                        <p class="subtitle">Bhiaya Shri Nandkishor Sharda himself prepared the concept of the logo of Manidweep during his lifetime, which was later given a physical form by Maa Basanti Manihar.</p>
+                        <a href="blog-details.html" class="imp-link">Read More <i class="ri-arrow-right-line"></i></a>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 view-wrapper">
+              <div class="single-blog h-calc wow fadeInRight" data-wow-delay="0.1s">
+                <div class="blog-img position-relative">
+                  <a href="blog-details.html" > <img src="assets/book-03.png" class="img-fluid w-100" alt="img"> </a>
+                </div>
+                  <div class="blog-info">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="blog-info-title">
+                        <h4 class="title text-capitalize"><a href="blog-details.html">Wonderful World After Death</a></h4>
+                        <p class="subtitle">Bhaiya Shri Nandkishore Sharda made Jagatjanani "Mother" his guru and got the divine knowledge received from her recorded in a divine book, named “Wonderful World After Death”.</p>
+                        <a href="blog-details.html" class="imp-link">Read More <i class="ri-arrow-right-line"></i></a>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="blog-section-two section-padding2">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-xl-7">
+        <!-- Section Title -->
+        <div class="section-tittle text-center mb-50">
+          <h2 class="title font-700">Divine Ambrosial Knowledge</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row gy-24">
+      <% @books.each_with_index do |book, index| %>
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 view-wrapper">
+          <div class="single-blog h-calc wow <%= animation_class(index) %>" data-wow-delay="<%= wow_delay(index) %>s">
+            <div class="blog-img position-relative">
+              <a href="<%= book.details_link %>">
+                <%= image_tag book.image_url, class: 'img-fluid w-100', alt: book.title %>
+              </a>
+            </div>
+            <div class="blog-info">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="blog-info-title">
+                  <h4 class="title text-capitalize">
+                    <a href="<%= book.details_link %>"><%= book.title %></a>
+                  </h4>
+                  <p class="subtitle"><%= book.subtitle %></p>
+                  <a href="<%= book.details_link %>" class="imp-link">
+                    Read More <i class="ri-arrow-right-line"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>

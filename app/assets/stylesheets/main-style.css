@@ -17223,6 +17223,11 @@ input[type=number] {
 .header-area-three {
   background-color: var(--header-bg3);
 }
+
+.header-area-three.home-page {
+  background-color: white;
+}
+
 @media (max-width: 1199px) {
   .header-area-three .header-right {
     margin-right: 60px;
@@ -25331,3 +25336,14 @@ input[type=number] {
     font-size: 14px;
   }
 }
+
+
+/* #carouselExampleControls{
+  position: relative;
+  height:400px;
+}
+.carousel-item{
+  object-fit: fill;
+  height: 100%;
+  width: 100%;
+} */

@@ -1,4 +1,27 @@
 <main>
+<!-- Gallery S t a r t -->
+
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <% @carousel_images.each_with_index do |image_name, index| %>
+      <div class="carousel-item <%= 'active' if index == 0 %>">
+        <%= image_tag "herosection/#{image_name}", class: 'd-block w-100', alt: "Slide #{index + 1}" %>
+      </div>
+    <% end %>
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+      <!-- End-of Gallery -->
       <!-- Hero area S t a r t-->
       <section class="hero-area-three">
         <div class="single-slider hero-padding-three">
@@ -6,68 +29,221 @@
             <div class="row justify-content-between">
               <div class="col-xxl-6 col-xl-6 col-lg-6 my-auto">
                 <div class="hero-caption mb-20">
-                  <p class="key-title font-700 mb-20">Go For Help</p>
-                  <h1 class="title font-700" data-animation="fadeInUp" data-delay=".0s">Small Effort Make Big Change</h1>
-                  <p class="pera mx-width-780" data-animation="fadeInUp" data-delay=".2s">Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
-                  <div class="d-flex gap-20 flex-wrap align-items-center">
-                    <a href="donation.html" class="btn-primary-fill pill-btn" data-animation="fadeInLeft" data-delay=".4s">Donate Now</a>
-                    <div class="d-flex">
-                      <div class="multi-image-one">
-                        <img src="/assets/gallery/testimonial-4.png" alt="image">
-                      </div>
-                      <div class="multi-image-two">
-                        <img src="/assets/gallery/testimonial-5.png" alt="image">
-                      </div>
-                      <div class="multi-image-three">
-                        <img src="/assets/gallery/testimonial-6.png" alt="image">
-                      </div>
-                      <div class="multi-image-four">
-                        <div class="rounded-badge">
-                          <h4 class="count">1M+</h4>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="hero-count-section flex justify-content-between">
-                    <div class="hero-count">
-                      <h4 class="title">12+</h4>
-                      <p class="pera mb-0">
-                        Years of <br>
-                        Experience
-                      </p>
-
-                      <div class="hero-divider"></div>
-                    </div>
-                    <div class="hero-count">
-                      <h4 class="title">140+</h4>
-                      <p class="pera mb-0">
-                        Thousands <br>
-                        volunteers
-                      </p>
-                    </div>
-                    <div class="hero-count">
-                      <h4 class="title">500+</h4>
-                      <p class="pera mb-0">
-                        Worid wide <br>
-                        Offices
-                      </p>
-                    </div>
-                  </div>
+                  <h1 class="title font-700" data-animation="fadeInUp" data-delay=".0s">What is Manidweep?</h1>
+                  <p class="pera mx-width-780" data-animation="fadeInUp" data-delay=".2s"><b>"Manidweep"</b>, means the divine abode of the Divine Mother. On Earth, <b>'Manidweep'</b>, A-183, Shastri Nagar, Jodhpur, is a symbol of that same divine abode whose creation was carried out by the ordinance of the Divine Mother. <b>'Manidweep'</b> is not just a building; it is a center filled with faith, spiritual practice, love, consciousness, and values, where Divine Mother Maa Tripursundari herself resides. This place is imbued with spiritual vibrations and serves as a source of divine knowledge for seekers. Negative thoughts naturally dissipate here, and individuals are uplifted by positive thinking. Just sitting in the peaceful environment here brings a sense of joy to the mind.</p>
+                  <a href="/about" class="btn-primary-fill pill-btn" data-animation="fadeInLeft" data-delay=".4s">Learn more</a>
                 </div>
               </div>
               <div class="col-xxl-6 col-xl-6 col-lg-6">
-                <div class="d-flex gap-44 justify-content-end">
-                  <div id="play-video" class="hero-image position-relative d-none d-lg-block">
-                    <img src="/assets/hero/hero-6.png" alt="img" class="w-100 tilt-effect" data-animation="fadeInRight" data-delay="0.2s">
+                
+                    <img src="https://iqinfotech.in/manidweep/assets/img/manidweep.png" height = "700px" width="100%" alt="img" class="w-100 tilt-effect" data-animation="fadeInRight" data-delay="0.2s">
                   </div>
+               
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- End-of Hero-->
+       <section class="our-event-two section-padding">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-xl-7">
+                <!-- Section Tittle -->
+                <div class="section-tittle text-center mb-50">
+                  <h2 class="title font-700">Our Torch Bearers</h2>
+                </div>
+            </div>
+          </div>
+          <div class="row gy-2">
+            <div class="col-xl-4">
+              <div class="single-event h-calc wow fadeInUp" data-wow-delay="0.1s">
+                <div class="event-img position-relative">
+                  <a href="event-details.html" > <img src="/assets/home-torch-bearer-01.png"  alt="img"> </a>                 
+                </div>
+                <div class="event-info">
+                  <h4><a class="title" href="event-details.html">Yugpravartak Shri Nandkishore Sharda</a></h4>
+                  <a href="event-details.html" class="author-name">Shri Nandkishore Sharda was a great exceptional personality. Through intense sadhna, he had a direct communion with the Divine Mother Maa Tripursundari which affirmed that she exists and bestows divine vision.</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4">
+              <div class="single-event h-calc wow fadeInUp" data-wow-delay="0.1s">
+                <div class="event-img position-relative">
+                  <a href="event-details.html" > <img src="/assets/home-torch-bearer-02.png"  alt="img"> </a>                 
+                </div>
+                <div class="event-info">
+                  <h4><a class="title" href="event-details.html">Vatsalyamayi Maa Basanti Manihar</a></h4>
+                  <a href="event-details.html" class="author-name">Maa Basanti Manihar renounced all worldly comforts and became a devoted disciple of the Divine Mother, engaging in intense sadhna. Her spiritual guide, Bhaiya Shri Nandkishore Sharada ji, imparted to her divine and eternal Truth, as well as the invisible spiritual powers of the Divine Mother.</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4">
+              <div class="single-event h-calc wow fadeInUp" data-wow-delay="0.1s">
+                <div class="event-img position-relative">
+                  <a href="event-details.html" > <img src="/assets/home-torch-bearer-03.png"  alt="img"> </a>                 
+                </div>
+                <div class="event-info">
+                  <h4><a class="title" href="event-details.html">Karunamayi Madhu Maa</a></h4>
+                  <a href="event-details.html" class="author-name">Kumari Madhubala Advani ji (Madhu Maa) first met Maa Basanti ji in a hospital. At their very first meeting, Maa Basanti ji felt a divine connection with Madhu Maa. Madhu Maa was also so much influenced by Maa Basanti ji's pure thoughts and her sincere devotion towards the Divine Mother, that eventually, she too became a part of the "Maa Parivar”.</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <!-- End-of Hero-->
 
+        <!-- Blog S t a r t -->
+      <section class="blog-section-two section-padding2">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-xl-7">
+              <!-- Section Tittle -->
+              <div class="section-tittle text-center mb-50">
+                <h2 class="title font-700">Divine Ambrosial Knowledge</h2>
+              </div>
+            </div>
+          </div>
+          <div class="row gy-24">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 view-wrapper">
+              <div class="single-blog h-calc wow fadeInLeft" data-wow-delay="0.1s">
+                <div class="blog-img position-relative">
+                  <a href="blog-details.html" > <img src="assets/book-01.png" class="img-fluid w-100" alt="img"> </a>
+                </div>
+                <div class="blog-info">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="blog-info-title">
+                      <h4 class="title text-capitalize"><a href="blog-details.html">Buddhi Vivek Yog Sadhna Technique.</a></h4>
+                      <p class="subtitle">On the basis of his experiences, Bhaiya Shri Nandkishore Sharda propounded a simple, contemporary, yet very effective technique called “Buddhi-Vivek Yoga Sadhana Technique” ..</p>
+                      <a href="blog-details.html" class="imp-link">
+                        Read More <i class="ri-arrow-right-line"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 view-wrapper">
+              <div class="single-blog h-calc wow fadeInUp" data-wow-delay="0.0s">
+                <div class="blog-img position-relative">
+                  <a href="blog-details.html" > <img src="assets/book-02.png" class="img-fluid w-100" alt="img"> </a>
+                  </div>
+                  <div class="blog-info">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="blog-info-title">
+                        <h4 class="title text-capitalize"><a href="blog-details.html">Logo of Manidweep</a></h4>
+                        <p class="subtitle">Bhiaya Shri Nandkishor Sharda himself prepared the concept of the logo of Manidweep during his lifetime, which was later given a physical form by Maa Basanti Manihar.</p>
+                        <a href="blog-details.html" class="imp-link">Read More <i class="ri-arrow-right-line"></i></a>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 view-wrapper">
+              <div class="single-blog h-calc wow fadeInRight" data-wow-delay="0.1s">
+                <div class="blog-img position-relative">
+                  <a href="blog-details.html" > <img src="assets/book-03.png" class="img-fluid w-100" alt="img"> </a>
+                </div>
+                  <div class="blog-info">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="blog-info-title">
+                        <h4 class="title text-capitalize"><a href="blog-details.html">Wonderful World After Death</a></h4>
+                        <p class="subtitle">Bhaiya Shri Nandkishore Sharda made Jagatjanani "Mother" his guru and got the divine knowledge received from her recorded in a divine book, named “Wonderful World After Death”.</p>
+                        <a href="blog-details.html" class="imp-link">Read More <i class="ri-arrow-right-line"></i></a>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End-of Blog -->
+      <div class="container">
+		<div class="p-5 bg-cover d-block d-md-flex align-items-center justify-content-between" style="background-image: url(assets/abstract2.png)">
+							<div>
+					<h5 class="text-white mb-2">"Divine grace and realization can be attained not by renouncing the world, but by living as householders and performing all duties with a spirit of detachment."</h5>
+					<p class="text-white mb-0 float-end quoter"> - Yugpravartak Shri Nandkishore Sharda</p>
+				</div>
+					</div>
+	</div>
+
+       <!-- Blog S t a r t -->
+      <section class="blog-section-two section-padding2">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-xl-7">
+              <!-- Section Tittle -->
+              <div class="section-tittle text-center mb-50">
+                <h2 class="title font-700">Selfless Social Service</h2>
+              </div>
+            </div>
+          </div>
+          <div class="row gy-24">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 view-wrapper">
+              <div class="single-blog h-calc wow fadeInLeft" data-wow-delay="0.1s">
+                <div class="blog-img position-relative">
+                  <a href="blog-details.html" > <img src="assets/swami-vivekanand-students-welfare-charitable-trust.png" class="img-fluid w-100" alt="img"> </a>
+                </div>
+                <div class="blog-info">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="blog-info-title">
+                      <h4 class="title text-capitalize"><a href="blog-details.html">Swami Vivekanand Students Welfare Charitable Trust</a></h4>
+                      <p class="subtitle">This trust was established on June 10, 1996, as per the ordinance of the Divine Mother Jagatjanani Maa Tripursundari, by Kumari Basanti Manihar Ji in Jodhpur, with Shri Nandkishore Sharda Ji serving as its President.</p>
+                      <a href="blog-details.html" class="imp-link">
+                        Read More <i class="ri-arrow-right-line"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 view-wrapper">
+              <div class="single-blog h-calc wow fadeInUp" data-wow-delay="0.0s">
+                <div class="blog-img position-relative">
+                  <a href="blog-details.html" > <img src="assets/maa-sharda-mani-trust.png" class="img-fluid w-100" alt="img"> </a>
+                  </div>
+                  <div class="blog-info">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="blog-info-title">
+                        <h4 class="title text-capitalize"><a href="blog-details.html">Maa Sharda Mani Trust</a></h4>
+                        <p class="subtitle">Shri Nandkishore Sharda ji realized that school education alone will not be enough for the holistic development of girl students. So he founded the Maa Shardamani Trust on March 28, 2001 in Jodhpur to provide scholarships</p>
+                        <a href="blog-details.html" class="imp-link">Read More <i class="ri-arrow-right-line"></i></a>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 view-wrapper">
+              <div class="single-blog h-calc wow fadeInRight" data-wow-delay="0.1s">
+                <div class="blog-img position-relative">
+                  <a href="blog-details.html" > <img src="assets/gyanyogi-shri-sandkishore-sharda-adhyatma-kendra.png" class="img-fluid w-100" alt="img"> </a>
+                </div>
+                  <div class="blog-info">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="blog-info-title">
+                        <h4 class="title text-capitalize"><a href="blog-details.html">Gyanyogi Shri Nandkishore Sharda Adhyatma Kendra</a></h4>
+                        <p class="subtitle">Swami Vivekanand Student’s Welfare Charitable Trust and Maa Sharda Mani Trust are only for girl students. In 2009, some girl students requested that their brothers' education was getting hindered due to want of funds.
+
+Read More</p>
+                        <a href="blog-details.html" class="imp-link">Read More <i class="ri-arrow-right-line"></i></a>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End-of Blog -->
+      <div class="container">
+		<div class="p-5 bg-cover d-block d-md-flex align-items-center justify-content-between" style="background-image: url(assets/abstract2.png)">
+							<div>
+					<h5 class="text-white mb-2">"Selfless remembrance and love for God is the base of human life." </h5>
+					<p class="text-white mb-0 float-end quoter"> - Yugapravartak Adhyatmayogi Shri Nandkishore Sharda</p>
+				</div>
+					</div>
+	</div>
       <!-- helpful area S t a r t-->
       <section class="helpful-area-three section-padding">
         <div class="container">
@@ -584,31 +760,5 @@
       </section>
       <!-- End-of Blog -->
 
-      <!-- Gallery S t a r t -->
-      <div class="gallery-area">
-        <div class="gallery-slider d-flex">
-          <div class="gallery-img">
-            <img src="/assets/gallery/gallery-1.png" alt="img">
-          </div>
-          <div class="gallery-img">
-            <img src="/assets/gallery/gallery-2.png" alt="img">
-          </div>
-          <div class="gallery-img">
-            <img src="/assets/gallery/gallery-3.png" alt="img">
-          </div>
-          <div class="gallery-img">
-            <img src="/assets/gallery/gallery-4.png" alt="img">
-          </div>
-          <div class="gallery-img">
-            <img src="/assets/gallery/gallery-2.png" alt="img">
-          </div>
-          <div class="gallery-img">
-            <img src="/assets/gallery/gallery-3.png" alt="img">
-          </div>
-          <div class="gallery-img">
-            <img src="/assets/gallery/gallery-1.png" alt="img">
-          </div>
-        </div>
-      </div>
-      <!-- End-of Gallery -->
+      
     </main>

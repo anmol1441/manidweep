@@ -1,0 +1,52 @@
+<main>
+  <!-- Breadcrumb Area Start -->
+  <section class="breadcrumb-section breadcrumb-bg">
+    <div class="container">
+      <div class="breadcrumb-text">
+        <h1 class="title wow fadeInUp" data-wow-delay="0.1s">Reset password</h1>
+      </div>
+    </div>
+  </section>
+  <!-- End-of Breadcrumb Area -->
+
+  <!-- Login area Start -->
+  <div class="login-area section-padding">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10">
+          <div class="login-card">
+            <!-- Logo -->
+            <div class="logo mb-40">
+              <a href="index.html" class="mb-30 d-block"><img src="/assets/logo/Logo.png" alt="logo"></a>
+            </div>
+            <!-- Form -->
+            <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+              <%= render "devise/shared/error_messages", resource: resource %>
+
+              <div class="contact-form mb-24">
+                <label class="contact-label">Email</label>
+                <%= f.email_field :email, class: "form-control contact-input", placeholder: "Email", autofocus: true, autocomplete: "email" %>
+              </div>
+
+              <div class="actions">
+                <%= f.submit "Send me reset password instructions", class: "btn-primary-fill justify-content-center w-100" %>
+              </div>
+            <% end %>
+
+            <div class="login-footer">
+              <div class="create-account">
+                <p class="mb-0">
+                  Go back to
+                  <a href="/users/sign_in">
+                    <span>Login</span>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End-of Login -->
+</main>

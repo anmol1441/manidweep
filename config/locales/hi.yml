@@ -1,5 +1,6 @@
 
 hi:
+  change_language: "English"
   home: "होम"
   about: "हमारे बारे में"
   torch:
@@ -33,3 +34,25 @@ hi:
     item3: "Photo Gallery"
   awards: "पुरस्कार"
   contact: "संपर्क करें"
+
+
+  home-img-1-text: "संसार को त्याग कर नहीं, वरन् गृहस्थ में रहते हुए व अपने सभी कर्त्तव्य अनासक्तभाव से करते हुए भी ईश्वरीय कृपा व दर्शन प्राप्त किये जा सकते हैं।"
+  home-img-1-auth: " युगप्रवर्तक अध्यात्मयोगी श्री नन्दकिशोर शारदा"
+
+  home-img-2-text: "ईश्वर का निःस्वार्थ स्मरण एवं प्रेम ही मानव जीवन का आधार है।"
+  home-img-2-auth: "युगप्रवर्तक अध्यात्मयोगी श्री नन्दकिशोर शारदा"
+
+  footer:
+    about_us: "हमारे बारे में"
+    contact_us: "संपर्क करें"
+    publications: "प्रकाशन"
+    basic_infrastructure: "मूलभूत संरचना सुविधाएँ"
+    awards: "पुरस्कार"
+    future_plans: "भविष्य की योजनाएँ"
+    faq: "सामान्य प्रश्न"
+    photo_gallery: "फोटो गैलरी"
+    downloads: "डाउनलोड"
+    contact:
+      email: "manidweepjodhpur@gmail.com"
+      phone: "+91-94149-17901"
+      address: "ए-183, शास्त्री नगर, जोधपुर, राजस्थान - 342003, भारत"

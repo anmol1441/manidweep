@@ -1,0 +1,19 @@
+<!-- app/views/home/index.html.erb -->
+<section class="hero-area-three">
+  <div class="single-slider hero-padding-three">
+    <div class="container">
+      <div class="row justify-content-between">
+        <div class="col-xxl-6 col-xl-6 col-lg-6 my-auto">
+          <div class="hero-caption mb-20">
+            <h1 class="title font-700" data-animation="fadeInUp" data-delay=".0s"><%= @hero_section[:title] %></h1>
+            <p class="pera mx-width-780" data-animation="fadeInUp" data-delay=".2s"><%= @hero_section[:description].html_safe %></p>
+            <a href="<%= @hero_section[:button_link] %>" class="btn-primary-fill pill-btn" data-animation="fadeInLeft" data-delay=".4s">Learn more</a>
+          </div>
+        </div>
+        <div class="col-xxl-6 col-xl-6 col-lg-6">
+          <img src="<%= @hero_section[:image_url] %>" height="700px" width="100%" alt="img" class="w-100 tilt-effect" data-animation="fadeInRight" data-delay="0.2s">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

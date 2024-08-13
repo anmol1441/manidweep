@@ -7,23 +7,13 @@
           
          <div class="header-left d-flex align-items-center justify-content-between">
             <div class="logo logo-small light-logo">
-              <a href="index.html"><img width="100" src="/assets/logo/Logo.png" alt="Charitfix Logo"></a>
+              <a href="/"><img width="70" src="/assets/logo/Logo.png" alt="Manidweep"></a>
             </div>
-            <div class="logo logo-mobile light-logo">
-              <a href="index.html"><img src="/assets/icon/favicon.png" alt="Favicon"></a>
             </div>
-          </div>
           <div class="main-menu d-none d-lg-block">
             <nav aria-label="Main navigation">
               <ul class="listing" id="navigation">
-      <%
-=begin%>
- <li class="single-list">
-        <a href="index.html" class="single"><%= t('home') %></a>
-      </li> 
-<%
-=end%>
-      <li class="single-list">
+              <li class="single-list">
         <a href="about.html" class="single"><%= t('about') %></a>
       </li>
       <li class="single-list">
@@ -73,35 +63,14 @@
       <li class="single-list">
         <a href="awards.html" class="single"><%= t('awards') %></a>
       </li>
-      <%
-=begin%>
- <%
-=begin%>
- <li class="single-list">
-        <a href="contact-us.html" class="single"><%= t('contact') %></a>
-      </li> 
-<%
-=end%> 
-
-
-               
-              </ul>
-            </nav>
+      
+      <li class="single-list">
+      <%= link_to t('change_language'), url_for(locale: I18n.locale == :en ? :hi : :en), class: "single mobile_menu d-block d-lg-none" %>
+      </li>   
+      </ul>
+      </nav>
           </div>
-          <%
-=begin%>
- <div class="header-right d-flex align-items-center">
-            <ul class="cart">
-              <li class="cart-list d-lg-inline-block">
-                <a href="donation.html" class="btn-primary-fill text-uppercase">
-                  <span class="pera">Donation</span>
-                </a>
-              </li>
-            </ul>
-          </div> 
-<%
-=end%>
-        </div>
+          </div>
         <div class="div">
           <div class="mobile_menu d-block d-lg-none"></div>
         </div>

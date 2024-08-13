@@ -1,0 +1,50 @@
+<main>
+  <!-- Gallery S t a r t -->
+
+  <%=render 'slider'%>
+  <%=render 'intro'%>
+  <%=render 'torch'%>
+  <%=render 'divine'%>
+  <div class="container">
+    <div
+      class="p-5 bg-cover d-block d-md-flex align-items-center justify-content-between"
+      style="background-image: url(assets/abstract2.png)"
+    >
+      <div>
+        <h5 class="text-white mb-2">
+          "<%=t('home-img-1-text')%>"
+        </h5>
+        <p class="text-white mb-0 float-end quoter">
+          - <%=t('home-img-1-auth')%>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Blog S t a r t -->
+ <%= render 'social'%>
+  <!-- End-of Blog -->
+  <div class="container">
+    <div
+      class="p-5 bg-cover d-block d-md-flex align-items-center justify-content-between"
+      style="background-image: url(assets/abstract2.png)"
+    >
+      <div>
+        <h5 class="text-white mb-2">
+          "<%=t('home-img-2-text')%>"
+        </h5>
+        <p class="text-white mb-0  float-end quoter">
+          - <%=t('home-img-2-auth')%>
+        </p>
+      </div>
+    </div>
+  </div>
+
+<%= render 'activity'%>
+
+<%= render 'testimonials'%>
+
+<%= render 'publications'%>
+<%= render 'news'%>
+
+</main>

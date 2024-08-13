@@ -1,0 +1,151 @@
+<section class="blog-section-two section-padding2">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-xl-7">
+        <!-- Section Tittle -->
+        <div class="section-tittle text-center mb-50">
+          <h2 class="title font-700">Selfless Social Service</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row gy-24">
+      <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 view-wrapper">
+        <div class="single-blog h-calc wow fadeInLeft" data-wow-delay="0.1s">
+          <div class="blog-img position-relative">
+            <a href="blog-details.html">
+              <img
+                src="assets/swami-vivekanand-students-welfare-charitable-trust.png"
+                class="img-fluid w-100"
+                alt="img"
+              />
+            </a>
+          </div>
+          <div class="blog-info">
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="blog-info-title">
+                <h4 class="title text-capitalize">
+                  <a href="blog-details.html"
+                    >Swami Vivekanand Students Welfare Charitable Trust</a
+                  >
+                </h4>
+                <p class="subtitle">
+                  This trust was established on June 10, 1996, as per the
+                  ordinance of the Divine Mother Jagatjanani Maa Tripursundari,
+                  by Kumari Basanti Manihar Ji in Jodhpur, with Shri Nandkishore
+                  Sharda Ji serving as its President.
+                </p>
+                <a href="blog-details.html" class="imp-link">
+                  Read More <i class="ri-arrow-right-line"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 view-wrapper">
+        <div class="single-blog h-calc wow fadeInUp" data-wow-delay="0.0s">
+          <div class="blog-img position-relative">
+            <a href="blog-details.html">
+              <img
+                src="assets/maa-sharda-mani-trust.png"
+                class="img-fluid w-100"
+                alt="img"
+              />
+            </a>
+          </div>
+          <div class="blog-info">
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="blog-info-title">
+                <h4 class="title text-capitalize">
+                  <a href="blog-details.html">Maa Sharda Mani Trust</a>
+                </h4>
+                <p class="subtitle">
+                  Shri Nandkishore Sharda ji realized that school education
+                  alone will not be enough for the holistic development of girl
+                  students. So he founded the Maa Shardamani Trust on March 28,
+                  2001 in Jodhpur to provide scholarships
+                </p>
+                <a href="blog-details.html" class="imp-link"
+                  >Read More <i class="ri-arrow-right-line"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 view-wrapper">
+        <div class="single-blog h-calc wow fadeInRight" data-wow-delay="0.1s">
+          <div class="blog-img position-relative">
+            <a href="blog-details.html">
+              <img
+                src="assets/gyanyogi-shri-sandkishore-sharda-adhyatma-kendra.png"
+                class="img-fluid w-100"
+                alt="img"
+              />
+            </a>
+          </div>
+          <div class="blog-info">
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="blog-info-title">
+                <h4 class="title text-capitalize">
+                  <a href="blog-details.html"
+                    >Gyanyogi Shri Nandkishore Sharda Adhyatma Kendra</a
+                  >
+                </h4>
+                <p class="subtitle">
+                  Swami Vivekanand Student’s Welfare Charitable Trust and Maa
+                  Sharda Mani Trust are only for girl students. In 2009, some
+                  girl students requested that their brothers' education was
+                  getting hindered due to want of funds. Read More
+                </p>
+                <a href="blog-details.html" class="imp-link"
+                  >Read More <i class="ri-arrow-right-line"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="blog-section-two section-padding2">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-xl-7">
+        <!-- Section Title -->
+        <div class="section-title text-center mb-50">
+          <h2 class="title font-700">Selfless Social Service</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row gy-24">
+      <% @posts.each_with_index do |post, index| %>
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 view-wrapper">
+          <div class="single-blog h-calc wow <%= animation_class(index) %>" data-wow-delay="<%= wow_delay(index) %>s">
+            <div class="blog-img position-relative">
+              <a href="<%= post.link %>">
+                <%= image_tag post.image_url, class: 'img-fluid w-100', alt: post.title %>
+              </a>
+            </div>
+            <div class="blog-info">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="blog-info-title">
+                  <h4 class="title text-capitalize">
+                    <a href="<%= post.link %>"><%= post.title %></a>
+                  </h4>
+                  <p class="subtitle"><%= post.subtitle %></p>
+                  <a href="<%= post.link %>" class="imp-link">
+                    Read More <i class="ri-arrow-right-line"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+

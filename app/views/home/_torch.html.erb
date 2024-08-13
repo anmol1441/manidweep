@@ -1,0 +1,68 @@
+<section class="blog-section-two section-padding2">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-xl-7">
+              <!-- Section Tittle -->
+              <div class="section-tittle text-center mb-50">
+                <h2 class="title font-700">Our Torch Bearers</h2>
+              </div>
+            </div>
+          </div>
+          <div class="row gy-24">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 view-wrapper">
+              <div class="single-blog h-calc wow fadeInLeft" data-wow-delay="0.1s">
+                <div class="blog-img position-relative">
+                  <a href="blog-details.html" > <img src="assets/home-torch-bearer-01.png" class="img-fluid w-100" alt="img"> </a>
+                </div>
+                <div class="blog-info">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="blog-info-title">
+                      <h4 class="title text-capitalize"><a href="blog-details.html">Yugpravartak Shri Nandkishore Sharda</a></h4>
+                      <p class="subtitle">Shri Nandkishore Sharda was a great exceptional personality. Through intense sadhna, he had a direct communion with the Divine Mother Maa Tripursundari which affirmed that she exists and bestows divine vision.</p>
+                      <a href="blog-details.html" class="imp-link">
+                        Read More <i class="ri-arrow-right-line"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+<section class="blog-section-two section-padding2">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-xl-7">
+        <!-- Section Title -->
+        <div class="section-tittle text-center mb-50">
+          <h2 class="title font-700">Our Torch Bearers</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row gy-24">
+      <% @torch_bearers.each_with_index do |torch_bearer, index| %>
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 view-wrapper">
+          <div class="single-blog h-calc wow fadeInLeft" data-wow-delay="<%= wow_delay(index) %>s">
+            <div class="blog-img position-relative">
+              <a href="<%= torch_bearer.details_link %>">
+                <%= image_tag torch_bearer.image_url, class: 'img-fluid w-100', alt: torch_bearer.name %>
+              </a>
+            </div>
+            <div class="blog-info">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="blog-info-title">
+                  <h4 class="title text-capitalize"><a href="<%= torch_bearer.details_link %>"><%= torch_bearer.name %></a></h4>
+                  <p class="subtitle"><%= torch_bearer.description %></p>
+                  <a href="<%= torch_bearer.details_link %>" class="imp-link">
+                    Read More <i class="ri-arrow-right-line"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
