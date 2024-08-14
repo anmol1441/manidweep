@@ -1,0 +1,58 @@
+<%= form_for(user, :url => form_url, multipart: true) do |f| %>
+  <% if user.errors.any? %>
+    <div id="error_explanation" class="alert alert-danger">
+      <ul>
+      <% user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group mb-3">
+        <%= f.label :name %>
+        <%= f.text_field :name, :class => "form-control", :autocomplete => 'name' %>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group mb-3">
+        <%= f.label :password, "Password" %>
+        <%= f.password_field :password, autocomplete: "off", :class => "form-control" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group mb-3">
+        <%= f.label :email, "Email" %>
+        <%= f.email_field :email, autocomplete: "email", :class => "form-control" %>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group mb-3">
+        <%= f.label :password_confirmation, "Confirm Password" %>
+        <%= f.password_field :password_confirmation, autocomplete: "off", :class => "form-control" %>
+      </div>
+    </div>
+   
+<div class="col-md-6">
+      <div class="form-group mb-3">
+        <%= f.label :phone %>
+        <%= f.text_field :phone, class: "form-control phone_no_masked", type: "text", :data => {:mask=> '(999) 999-9999'} %>
+      </div>
+    </div>
+
+
+  <div class="row">
+    
+    
+  </div>
+  <div class="form-group text-end mt-3">
+    <%= link_to 'Cancel', user_index_path, :class => "btn btn-secondary waves-effect waves-light" %>
+    <%= f.button "Save", :class=>"btn btn-primary waves-effect waves-light m-r-10" %>
+  </div>
+<% end %>

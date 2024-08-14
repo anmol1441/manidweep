@@ -22,8 +22,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_12_085521) do
     t.datetime "remember_created_at"
     t.string "name"
     t.string "phone"
-    t.date "dob"
-    t.string "u_type"
+    t.string "u_type", default: "admin"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true

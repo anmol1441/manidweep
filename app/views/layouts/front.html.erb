@@ -20,7 +20,7 @@
     <meta name="twitter:image" content="www.Charitfix.com" >
     <meta name="twitter:card" content="summary" >
     <title>Manidweep</title>
-    <link rel="icon" type="image/x-icon" sizes="20x20" href="/assets/icon/favicon.png">
+    <link rel="icon" type="image/x-icon" sizes="20x20" href="/assets/icon/favicon.ico">
 
     <!-- Bootstrap -->
     <link rel="stylesheet" type="text/css" href="/assets/bootstrap-5.3.0.min.css">
@@ -35,7 +35,12 @@
   </head>
 <body>
   <header>
-    <div class="header-area-three <%= 'home-page' unless request.path == '/' %>">
+    <%
+=begin%>
+ <div class="header-area-three <%= 'home-page' unless request.path == '/' %>"> 
+<%
+=end%>
+    <div class="header-area-three <%= 'home-page' unless params[:controller] == 'home' && params['action'] == 'index' %>">
       <div class="main-header">
         <!-- Top -->
         <%= render "front/header-top"%>

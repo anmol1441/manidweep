@@ -1,0 +1,57 @@
+<h1>Users</h1>
+<div class="container py-8 py-lg-10">
+  <div class="g-pa-20">
+    <form method="GET">
+      <div class="row mb-3">
+        <div class="col">
+          <input type="text" class="form-control" name="q" value="<%=params[:q]%>" placeholder="Search" aria-label="First name">
+        </div>
+        <div class="col">
+          <button type="submit" class="btn btn-primary">Search</button>
+        
+          <% if params.key?(:q) %>
+          <a class="btn btn-primary" href="<%=request.path%>">Show All</a>
+          <% end %>
+        </div>
+        <div class="col text-end">
+          <%= link_to 'New User', new_user_path, :class => "btn btn-primary" %>
+        </div>
+      </div>
+    </form>
+    <div class="card g-brd-gray-light-v7 g-pa-15 g-pa-25-30--md g-mb-30">
+      <div class="table-responsive mt-2">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Type</th>
+
+              <th></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <% @users.each do |user| %>
+              <tr>
+                <td><%= user.name %></td>
+                <td><%= user.email %></td>
+                <td><%= user.phone %></td>
+                <td><%= user.u_type %></td>
+
+                <td class="text-end">
+                  <%= link_to '<i class="fa fa-edit white"></i> Edit'.html_safe, edit_user_path(user), :class => 'btn btn-primary btn-sm' %>
+                  
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+        <%unless @users.present? %>
+          <h3 class="text-center my-5 text-muted">No Record Found</h3>
+        <% end %>
+      </div>
+      
+  </div>
+</div>

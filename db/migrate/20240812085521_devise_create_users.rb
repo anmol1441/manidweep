@@ -17,8 +17,8 @@ class DeviseCreateUsers < ActiveRecord::Migration[7.1]
       ## Additional Fields
       t.string :name
       t.string :phone
-      t.date :dob
-      t.string :u_type  # "admin" or "other"
+      t.string :u_type, default: "admin"
+
 
       t.timestamps null: false
     end

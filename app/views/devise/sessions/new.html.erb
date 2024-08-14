@@ -9,6 +9,9 @@
   </section>
   <!-- End of Breadcrumb Area -->
 
+
+
+
   <!-- Login Area Start -->
   <div class="login-area section-padding">
     <div class="container">
@@ -40,20 +43,21 @@
                   <i class="toggle-password ri-eye-line"></i>
                 </div>
               </div>
+              <!-- Notification Area Start -->
+<% if flash.any? %>
+  <div class="notification-area">
+    <% flash.each do |type, message| %>
+      <div class="alert alert-<%= bootstrap_class_for(type) %> alert-dismissible fade show" role="alert">
+        <%= message %>
+
+      </div>
+    <% end %>
+  </div>
+<% end %>
+<!-- Notification Area End -->
 
               <%= f.submit "Login", class: "btn-primary-fill justify-content-center d-flex" %>
             <% end %>
-
-            <div class="login-footer">
-              <div class="create-account">
-                <p>
-                  Don’t have an account?
-                  <a href="/users/sign_up">
-                    <span>Register</span>
-                  </a>
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </div>

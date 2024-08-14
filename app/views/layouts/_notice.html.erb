@@ -1,0 +1,51 @@
+<!-- key flash notices separate of most user login items -->
+<% unless flash.empty? %>
+<script type="text/javascript">
+
+<% flash.each do |key, value|%>
+    <%
+    ftitle = toast_title(key)
+    finterval = 20000
+    if (key!="recaptcha_error" && key!="c_warning" && key != "auth_token") %>
+        <% if value.to_s != "true"
+
+            if (key == 'alert')
+                key = 'warning'
+            end
+
+            if (key == 'c_warning')
+                key = 'warning'
+                ftitle = "Notice"
+                finterval = 30000
+            end
+            %>
+
+         $.toast({
+            heading:'<%=ftitle%>',
+            text: "<%= value&.html_safe%>",
+            position: 'top-right',
+            loaderBg: '<%=toast_color(key)%>',
+            icon: '<%=toast_key(key)%>',
+            hideAfter: `<%=finterval%>`,
+            stack: 6
+         });
+        <% end %>
+    <% end %>
+<% end %>
+</script>
+<% end %>
+<!-- /key flash notices separate of most user login items -->
+
+<div id="modal_confirm" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body pt-2" style="font-size: 1rem;">
+
+      </div>
+      <div class="modal-footer">
+        <a id="modal-cancel" href="javascript://" class="btn btn-secondary cancel" data-bs-dismiss="modal">Cancel</a>
+        <a id="modal-accept" href="javascript://" class="btn btn-danger approve">Delete</a>
+      </div>
+    </div>
+  </div>
+</div>

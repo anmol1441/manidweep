@@ -3,6 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+  
 
   # Email format validation
   validates_email_format_of :email, message: 'is invalid.', if: proc { |f| f.email.present? }
