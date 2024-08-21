@@ -1,0 +1,63 @@
+<div class="container py-8 py-lg-10">
+  <div class="g-pa-20">
+
+    <!-- Toolbar -->
+    <div id="kt_app_toolbar" class="app-toolbar py-3 py-lg-6">
+      <div id="kt_app_toolbar_container" class="app-container container-xxl d-flex flex-stack">
+        <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
+          <h1 class="page-heading d-flex text-gray-900 fw-bold fs-3 flex-column justify-content-center my-0">Super Categories</h1>
+        </div>
+        <div class="card-toolbar">
+          <%= link_to 'New Super Category', new_super_category_path, :class => "btn btn-primary" %>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="card g-brd-gray-light-v7 g-pa-15 g-pa-25-30--md g-mb-30">
+      <div class="card-header align-items-center py-5 gap-2 gap-md-5">
+        <!-- Search -->
+        <div class="d-flex align-items-center position-relative my-1">
+          <i class="ki-duotone ki-magnifier fs-3 position-absolute ms-4">
+            <span class="path1"></span>
+            <span class="path2"></span>
+          </i>
+          <input type="text" data-kt-ecommerce-category-filter="search" class="form-control form-control-solid w-250px ps-12" placeholder="Search Category" />
+        </div>
+      </div>
+
+      <!-- Table -->
+      <div class="card-body pt-0">
+        <div class="table-responsive mt-2">
+          <table class="table align-middle table-row-dashed fs-6 gy-5" id="kt_ecommerce_category_table">
+            <thead>
+              <tr class="text-start text-gray-500 fw-bold fs-7 text-uppercase gs-0">
+                <th class="min-w-250px">Category</th>
+                <th class="text-end min-w-70px">Actions</th>
+              </tr>
+            </thead>
+            <tbody class="fw-semibold text-gray-600">
+              <% @super_categories.each do |super_category| %>
+                <tr>
+                  <td><%= super_category.name_en %></td>
+                  <td class="text-end">
+                    <%= link_to '<i class="fa fa-edit white"></i> Edit'.html_safe, edit_super_category_path(super_category), :class => 'btn btn-primary btn-sm' %>
+                    <%= link_to '<i class="fa fa-times white"></i> Delete'.html_safe, super_category, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger btn-sm' %>
+                  </td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+          <% unless @super_categories.present? %>
+            <h3 class="text-center my-5 text-muted">No Record Found</h3>
+          <% end %>
+        </div>
+
+        <!-- Pagination -->
+        <div class="float-right d-flex align-items-center justify-content-center">
+          <%= will_paginate @super_categories, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

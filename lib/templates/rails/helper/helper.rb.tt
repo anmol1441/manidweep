@@ -1,0 +1,15 @@
+=begin
+  <%= class_name %>Helper
+  Details for <%= class_name %> helper
+
+  initCoders Base Project
+  Created by initCoders
+=end
+
+#Add any require file
+
+<% module_namespacing do -%>
+# <%= class_name %>
+module <%= class_name %>Helper
+end
+<% end -%>

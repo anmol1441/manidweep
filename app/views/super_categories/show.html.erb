@@ -1,0 +1,52 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+
+  <%= @super_category.user_id %>
+</p>
+
+<p>
+  <strong>Name en:</strong>
+
+  <%= @super_category.name_en %>
+</p>
+
+<p>
+  <strong>Name hi:</strong>
+
+  <%= @super_category.name_hi %>
+</p>
+
+<p>
+  <strong>Details en:</strong>
+
+  <%= @super_category.details_en %>
+</p>
+
+<p>
+  <strong>Details hi:</strong>
+
+  <%= @super_category.details_hi %>
+</p>
+
+<p>
+  <strong>Slug:</strong>
+
+  <%= @super_category.slug %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+
+  <%= @super_category.status %>
+</p>
+
+<p>
+  <strong>Order:</strong>
+
+  <%= @super_category.order %>
+</p>
+
+<%= link_to 'Edit', edit_super_category_path(@super_category) %> |
+<%= link_to 'Back', super_categories_path %>

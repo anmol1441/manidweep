@@ -1,0 +1,50 @@
+<section class="position-relative bg-primary bg-opacity-10">
+  <div class="container position-relative py-5 py-lg-10">
+    <div class="row pt-9 pt-lg-9 align-items-center">
+      <div class="col-xl-9">
+        <h1 class="display-4 mb-3"><%= plural_table_name.titleize %></h1>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="container py-8 py-lg-10">
+  <div class="g-pa-20">
+
+    <div class="mb-3 text-end">
+      <%%= link_to 'New <%= singular_table_name.titleize %>', new_<%= singular_route_name %>_path, :class => "btn btn-primary" %>
+    </div>
+
+    <div class="card g-brd-gray-light-v7 g-pa-15 g-pa-25-30--md g-mb-30">
+      <div class="table-responsive mt-2">
+        <table class="table">
+          <thead>
+            <tr>
+        <% attributes.reject(&:password_digest?).each do |attribute| -%>
+        <th><%= attribute.human_name %></th>
+            <% end -%>
+        <th></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <%% @<%= plural_table_name %>.each do |<%= singular_table_name %>| %>
+              <tr>
+                <% attributes.reject(&:password_digest?).each do |attribute| -%>
+                <td><%%= <%= singular_table_name %>.<%= attribute.column_name %> %></td>
+                <% end -%>
+                <td class="text-end">
+                  <%%= link_to '<i class="fa fa-edit white"></i> Edit'.html_safe, edit_<%= singular_table_name %>_path(<%= singular_table_name %>), :class => 'btn btn-primary btn-sm' %>
+                  <%%= link_to '<i class="fa fa-times white"></i> Delete'.html_safe, <%= singular_table_name %>, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger btn-sm' %>
+                </td>
+              </tr>
+            <%% end %>
+          </tbody>
+        </table>
+        <%% unless @<%= plural_table_name %>.present? %>
+          <h3 class="text-center my-5 text-muted">No Record Found</h3>
+        <%% end %>
+      </div>
+      <div class="float-right d-flex align-items-center justify-content-center"><%%= will_paginate @<%= plural_table_name %>, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %></div>
+    </div>
+  </div>
+</div>

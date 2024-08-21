@@ -81,3 +81,7 @@ gem 'validates_email_format_of'
 group :development do
   gem 'letter_opener'
 end
+
+# for pagination
+gem 'will_paginate', '~> 3.1'
+gem 'will_paginate-bootstrap4'

@@ -1,0 +1,68 @@
+<%= form_for(@super_category) do |f| %>
+  <% if @super_category.errors.any? %>
+    <div id="error_explanation" class="bg-red-100 text-red-700 p-4 rounded-lg mb-4" role="alert">
+      <div class="flex justify-between items-center">
+        <span class="font-bold">Errors:</span>
+        <button type="button" class="text-red-700" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <ul class="mt-2">
+        <% @super_category.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="app-main flex-column flex-row-fluid" id="kt_app_main">
+    <div class="d-flex flex-column flex-column-fluid">
+      <div id="kt_app_content" class="app-content flex-column-fluid">
+        <div id="kt_app_content_container" class="app-container container-xxl">
+          <div class="card card-flush py-4">
+            <div class="card-header">
+              <h2 class="card-title">Super Category Details</h2>
+            </div>
+            <div class="card-body pt-0">
+              <div class="mb-10 fv-row">
+                <%= f.label :name_en, class: "required form-label" %>
+                <%= f.text_field :name_en, class: "form-control mb-2" %>
+                <div class="text-muted fs-7">A category name is required and recommended to be unique.</div>
+              </div>
+
+              <div class="mb-10 fv-row">
+                <%= f.label :details_en, class: "form-label" %>
+                <%= f.text_area :details_en, class: "form-control mb-2" %>
+                <div class="text-muted fs-7">Set a description to the category for better visibility.</div>
+              </div>
+
+              <div class="mb-10 fv-row">
+                <%= f.label :name_hi, class: "required form-label" %>
+                <%= f.text_field :name_hi, class: "form-control mb-2" %>
+                <div class="text-muted fs-7">A category name is required and recommended to be unique.</div>
+              </div>
+
+              <div class="mb-10 fv-row">
+                <%= f.label :details_hi, class: "form-label" %>
+                <%= f.text_area :details_hi, class: "form-control mb-2" %>
+                <div class="text-muted fs-7">Set a description to the category for better visibility.</div>
+              </div>
+
+              <div class="form-group mb-3">
+    <%= f.label :status, class: "form-label" %><br>
+    <div class="form-check form-switch">
+      <%= f.check_box :status, class: "form-check-input", id: "statusSwitch" %>
+      <%= f.label :status, "Status", class: "form-check-label" %>
+    </div>
+  </div>
+              <div class="d-flex justify-end gap-4 mt-6">
+                <%= link_to 'Cancel', super_categories_path, class: "btn btn-light me-5" %>
+                <%= f.submit "Save", class: "btn btn-primary" %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

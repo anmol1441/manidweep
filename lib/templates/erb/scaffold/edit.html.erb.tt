@@ -1,0 +1,14 @@
+<section class="position-relative bg-primary bg-opacity-10">
+  <div class="container position-relative py-5 py-lg-10">
+    <div class="row pt-9 pt-lg-9 align-items-center">
+      <div class="col-xl-9">
+        <h1 class="display-4 mb-3">Edit <%= singular_table_name.titleize %></h1>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="container py-8 py-lg-10">
+  <div class="g-pa-20">
+  	<%%= render 'form', <%= singular_table_name %>: @<%= singular_table_name %> %>
+  </div>
+</div>
