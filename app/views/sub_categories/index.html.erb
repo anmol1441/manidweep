@@ -1,0 +1,69 @@
+<section class="position-relative bg-primary bg-opacity-10">
+  <div class="container position-relative py-5 py-lg-10">
+    <div class="row pt-9 pt-lg-9 align-items-center">
+      <div class="col-xl-9">
+        <h1 class="display-4 mb-3">Sub Categories</h1>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="container py-8 py-lg-10">
+  <div class="g-pa-20">
+
+    <div class="mb-3 text-end">
+      <div class="mb-3 text-end">
+  <%= link_to 'New Sub Category', new_super_category_sub_category_path(@super_category), class: "btn btn-primary" %>
+</div>
+
+    </div>
+
+    <div class="card g-brd-gray-light-v7 g-pa-15 g-pa-25-30--md g-mb-30">
+      <div class="table-responsive mt-2">
+        <table class="table">
+          <thead>
+            <tr>
+                <th>User</th>
+                    <th>Super category</th>
+                    <th>Name en</th>
+                    <th>Name hi</th>
+                    <th>Details en</th>
+                    <th>Details hi</th>
+                    <th>Slug</th>
+                    <th>Page content en</th>
+                    <th>Page content hi</th>
+                    <th>Order</th>
+                    <th></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <% @sub_categories.each do |sub_category| %>
+              <tr>
+                                <td><%= sub_category.user_id %></td>
+                                <td><%= sub_category.super_category_id %></td>
+                                <td><%= sub_category.name_en %></td>
+                                <td><%= sub_category.name_hi %></td>
+                                <td><%= sub_category.details_en %></td>
+                                <td><%= sub_category.details_hi %></td>
+                                <td><%= sub_category.slug %></td>
+                                <td><%= sub_category.page_content_en %></td>
+                                <td><%= sub_category.page_content_hi %></td>
+                                <td><%= sub_category.order %></td>
+                                <td class="text-end">
+                  <%= link_to '<i class="fa fa-edit white"></i> Edit'.html_safe, edit_super_category_sub_category_path(sub_category.super_category, sub_category), :class => 'btn btn-primary btn-sm' %>
+
+                  <%= link_to '<i class="fa fa-times white"></i> Delete'.html_safe, super_category_sub_category_path(sub_category.super_category, sub_category), method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger btn-sm' %>
+
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+        <% unless @sub_categories.present? %>
+          <h3 class="text-center my-5 text-muted">No Record Found</h3>
+        <% end %>
+      </div>
+     
+    </div>
+  </div>
+</div>

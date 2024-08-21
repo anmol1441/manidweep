@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :super_categories
+  resources :super_categories do
+    resources :sub_categories
+  end
   get "admin/dashboard", to: "back#index"
 
   post 'change_locale', to: 'application#change_locale'

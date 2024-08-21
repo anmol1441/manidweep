@@ -1,0 +1,75 @@
+
+<%= form_for([@super_category, @sub_category]) do |f| %>
+  <% if @sub_category.errors.any? %>
+    <div id="error_explanation" class="bg-red-100 text-red-700 p-4 rounded-lg mb-4" role="alert">
+      <div class="flex justify-between items-center">
+        <span class="font-bold">Errors:</span>
+        <button type="button" class="text-red-700" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <ul class="mt-2">
+        <% @sub_category.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="app-main flex-column flex-row-fluid" id="kt_app_main">
+    <div class="d-flex flex-column flex-column-fluid">
+      <div id="kt_app_content" class="app-content flex-column-fluid">
+        <div id="kt_app_content_container" class="app-container container-xxl">
+          <div class="card card-flush py-4">
+            <div class="card-header">
+              <h2 class="card-title">Sub Category Details</h2>
+            </div>
+            <div class="card-body pt-0">
+              <div class="mb-6">
+                <%= f.label :super_category_id, class: "form-label" %>
+                <%= f.text_field :super_category_id, class: "form-control" %>
+              </div>
+
+              <div class="mb-6">
+                <%= f.label :name_en, class: "form-label" %>
+                <%= f.text_field :name_en, class: "form-control" %>
+              </div>
+
+              <div class="mb-6">
+                <%= f.label :name_hi, class: "form-label" %>
+                <%= f.text_field :name_hi, class: "form-control" %>
+              </div>
+
+              <div class="mb-6">
+                <%= f.label :details_en, class: "form-label" %>
+                <%= f.text_area :details_en, class: "form-control" %>
+              </div>
+
+              <div class="mb-6">
+                <%= f.label :details_hi, class: "form-label" %>
+                <%= f.text_area :details_hi, class: "form-control" %>
+              </div>
+              <div class="mb-6">
+                <%= f.label :page_content_en, class: "form-label" %>
+                <%= f.text_area :page_content_en, class: "form-control" %>
+              </div>
+
+              <div class="mb-6">
+                <%= f.label :page_content_hi, class: "form-label" %>
+                <%= f.text_area :page_content_hi, class: "form-control" %>
+              </div>
+
+            
+
+              <div class="flex justify-end gap-4 mt-6">
+                <%= link_to 'Cancel', super_category_sub_categories_path(@super_category), class: "btn btn-secondary" %>
+
+                <%= f.submit "Save", class: "btn btn-primary" %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
