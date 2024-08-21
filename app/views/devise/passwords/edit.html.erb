@@ -1,25 +1,69 @@
-<h2>Change your password</h2>
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-  <%= f.hidden_field :reset_password_token %>
+<main>
+  <!-- Breadcrumb Area Start -->
+  <section class="breadcrumb-section breadcrumb-bg">
+    <div class="container">
+      <div class="breadcrumb-text">
+        <h1 class="title wow fadeInUp" data-wow-delay="0.1s">New Password</h1>
+      </div>
+    </div>
+  </section>
+  <!-- End-of Breadcrumb Area -->
 
-  <div class="field">
-    <%= f.label :password, "New password" %><br />
-    <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> characters minimum)</em><br />
-    <% end %>
-    <%= f.password_field :password, autofocus: true, autocomplete: "new-password" %>
+  <!-- Login area Start -->
+  <div class="login-area section-padding">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10">
+          <div class="login-card">
+            <!-- Logo -->
+            <div class="logo mb-40">
+              <a href="<%= root_path %>" class="mb-30 d-block">
+                <%= image_tag "logo/Logo-charitfix.png", alt: "logo" %>
+              </a>
+            </div>
+
+            <!-- Form -->
+            <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+              <%= render "devise/shared/error_messages", resource: resource %>
+              <%= f.hidden_field :reset_password_token %>
+
+              <!-- New Password -->
+              <div class="position-relative contact-form mb-24">
+                <%= f.label :password, "New Password", class: "contact-label" %>
+                <% if @minimum_password_length %>
+                  <em>(<%= @minimum_password_length %> characters minimum)</em><br />
+                <% end %>
+                <%= f.password_field :password, autofocus: true, autocomplete: "new-password", class: "form-control contact-input password-input", id: "txtPasswordLogin" %>
+                <i class="toggle-password ri-eye-line"></i>
+              </div>
+
+              <!-- Confirm New Password -->
+              <div class="position-relative contact-form mb-24">
+                <%= f.label :password_confirmation, "Confirm Password", class: "contact-label" %>
+                <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control contact-input password-input", id: "txtPasswordLogin2" %>
+                <i class="toggle-password ri-eye-line"></i>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="actions">
+                <%= f.submit "Change my password", class: "btn-primary-fill justify-content-center d-flex" %>
+              </div>
+            <% end %>
+
+            <!-- Footer Links -->
+            <div class="login-footer">
+              <div class="create-account">
+                <p class="mb-0">
+                  Go back to
+                  <%= link_to "Login", new_session_path(resource_name) %>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation, "Confirm new password" %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Change my password" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+  <!-- End-of Login -->
+</main>

@@ -1,5 +1,5 @@
 class HomeController < ApplicationController 
-  # layout "front"
+  layout "front"
   def index
     @carousel_images = Dir.glob(Rails.root.join('app', 'assets', 'images', 'herosection', '*')).map do |image_path|
       File.basename(image_path)

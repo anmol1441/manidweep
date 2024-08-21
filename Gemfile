@@ -77,3 +77,7 @@ gem 'dotenv-rails', groups: [:development, :test]
 gem 'validates_email_format_of'
 
 
+# Gemfile
+group :development do
+  gem 'letter_opener'
+end

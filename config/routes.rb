@@ -9,14 +9,14 @@ Rails.application.routes.draw do
     get 'contact', to: 'front#contact'   
   end
 
-  devise_for :users, skip: [:registrations], controllers: { sessions: 'users/sessions', passwords: 'users/passwords', registrations: 'users/registrations',  invitations: 'users/invitations' }
+  devise_for :users,  controllers: { sessions: 'users/sessions', passwords: 'users/passwords', registrations: 'users/registrations',  invitations: 'users/invitations' }
 
-  devise_scope :user do
-    get 'users/edit' => 'users/registrations#edit', :as => 'edit_user_registration'
-    put 'users' => 'users/registrations#update', :as => 'user_registration'
-  end
+  # devise_scope :user do
+  #   get 'users/edit' => 'users/registrations#edit', :as => 'edit_user_registration'
+  #   put 'users' => 'users/registrations#update', :as => 'user_registration'
+  # end
 
-  resources :user
+  # resources :user
 
 
   
